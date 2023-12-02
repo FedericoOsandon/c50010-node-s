@@ -1,0 +1,12 @@
+{
+  "name": "11-18-c50010-s",
+  "version": "1.0.0",
+  "description": "",
+  "main": "desafio1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Federico Osandón",
+  "license": "ISC"
+}
