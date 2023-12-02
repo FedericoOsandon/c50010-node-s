@@ -1,0 +1,10 @@
+[
+  {
+    "nombre": "fede",
+    "apellido": "Osandón",
+    "username": "fede user",
+    "password": "123456",
+    "salt": "CZx6e7X2UzsVxUANufGvcWNTxDhY+pRHeGCv/6xnmtkKLLlOxSWJbDpYo7yldxY1geQD4WGuqE8HXgMFM7ul8ckF4y7ih1NU7MJA227h9psfTQdd4BWUJZK7n3A+wZgGgh7XPKGFn7O6F3mIz0OS8BHlJdycsdii4kKO9R81TW0=",
+    "newPass": "ec41561da0f1d1c89e8780fc1f5c824cf09f6bd142cbf65a322c781e8a775b96"
+  }
+]
