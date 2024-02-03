@@ -1,0 +1,81 @@
+
+GET http://localhost:8080/api/users
+
+### 
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+    "first_name": "Federico",
+    "last_name": "Osandón",
+    "email": "f1@gmail.com"
+}
+
+
+### 
+PUT http://localhost:8080/api/users/65130d0c645986ff5e751a2e
+Content-Type: application/json
+
+{    
+   "first_name": "Federico new",
+    "last_name": "Osandón new",
+    "email": "email de prueba"
+}
+
+### 
+DELETE http://localhost:8080/api/users/65130d0c645986ff5e751a2e
+
+### 
+GET http://localhost:8080/api/frase
+
+###
+GET http://localhost:8080/api/palabras/1
+
+
+
+// productos 
+###
+POST http://localhost:8080/api/products 
+Content-Type: application/json
+
+{
+    "title": "prudcto prueba",
+    "description": "description proudct prueba",
+    "price": 1500,
+    "img": "ruta prueba",
+    "code": "002",
+    "stock": 1500
+}
+
+### 
+PUT http://localhost:8080/api/products/1
+Content-Type: application/json
+
+{
+    "title": "prudcto prueba",
+    "description": "description proudct prueba",
+    "price": 1500,
+    "img": "ruta prueba",
+    "code": "002",
+    "stock": 1500
+}
+
+### 
+DELETE http://localhost:8080/api/products/1
+
+
+
+
+### 
+GET http://localhost:8080/api/carts/
+
+### Sessions
+POST http://localhost:8080/pruebas/login 
+Content-Type: application/json
+
+{
+    "email": "f@gmail.com",
+    "password": "123456"
+}
+### 
+GET http://localhost:8080/pruebas/logout 
