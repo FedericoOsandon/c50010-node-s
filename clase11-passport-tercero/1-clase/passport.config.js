@@ -6,6 +6,7 @@ const { createHash, isValidPassword } = require('../utils/hashBcrypt')
 const LocalStrategy = local.Strategy
 
 const initializePassport = () => {
+    
     passport.use('register', new LocalStrategy({
         passReqToCallback: true, // accediendo al req
         usernameField: 'email'
