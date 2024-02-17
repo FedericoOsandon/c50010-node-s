@@ -1,0 +1,31 @@
+{
+  "name": "clase2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "start:dev": "node --watch src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.4",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1"
+  }
+}
