@@ -1,0 +1,34 @@
+{
+  "name": "11-18-c50010-s",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js --mode production",
+    "dev": "nodemon src/server.js --mode development",
+    "start:dev": "node --watch src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bootstrap": "^5.3.3",
+    "commander": "^12.0.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.4",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.7",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.4",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "react-bootstrap": "^2.10.1",
+    "socket.io": "^4.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}

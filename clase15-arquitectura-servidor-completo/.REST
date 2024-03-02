@@ -1,0 +1,41 @@
+GET http://localhost:8080/pruebas/asdfáé
+
+
+###
+GET http://localhost:8080/api/users
+###
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+    "first_name": "Fede",
+    "last_name": "osandón",
+    "email": "fprueba@gmail.com",
+    "password": "123456"
+}
+
+
+### prouducts 
+POST http://localhost:8080/api/products
+Content-Type: application/json
+
+{
+    "title": "producto dos",
+    "description":"Esto es una descripción dos", 
+    "price": 5500,
+    "stock": 100, 
+    "category": "remeras",
+    "thumbnail": "image"
+}
+
+###
+POST http://localhost:8080/api/carts
+###
+GET http://localhost:8080/api/carts/1
+###
+POST http://localhost:8080/api/carts/3/products/3
+Content-Type: application/json
+
+{
+    "quantity": 5
+}
