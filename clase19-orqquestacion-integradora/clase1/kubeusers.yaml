@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  name: kube10service
+spec:
+  selector:
+    app: kubeusers10
+  ports:
+    - port: 80
+      targetPort: 8080
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: kubeusers10
+spec:
+  replicas: 5
+  selector:
+    matchLabels: 
+      app: kubeusers10
+  template:
+    metadata: 
+      labels:
+        app: kubeusers10
+    spec:
+      containers:
+      - name: kubecontainer10
+        image: defe014/userscreator50010:1.0.0
+        ports: 
+          - containerPort: 8080
+        env: 
+          - name: MONGO_URL
+            value: mongodb+srv://Federico:Federico1**@coderexample.hjzrdtr.mongodb.net/?retryWrites=true&w=majority
+        imagePullPolicy: Always
+

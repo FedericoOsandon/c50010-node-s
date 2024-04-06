@@ -1,0 +1,33 @@
+
+###
+POST http://localhost:8080/api/sessions/login
+Content-Type: application/json
+
+{
+    "email": "f@gmail.com",
+    "password": "123456"
+}
+
+
+###
+POST http://localhost:8080/api/sessions/register
+Content-Type: application/json
+
+{
+    "first_name": "federico",
+    "last_name": "federico",
+    "email": "projectodigitalgen@gmail.com",
+    "password": "123456"
+}
+###___________________________________________________
+GET http://localhost:8080/api/users
+
+###
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+    "first_name": "federico",
+    "last_name": "el mejor",
+    "email": "f@gmail..com"
+}
