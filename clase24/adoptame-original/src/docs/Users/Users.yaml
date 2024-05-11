@@ -1,0 +1,102 @@
+paths:
+  /api/users/:
+    get:
+      summary: Obtiene todos los usuarios
+      tags:
+        - Users
+      responses:
+        "200":
+          description: Los usuarios fueron obtenidos correctamente
+          content:
+            application/json:
+              schema:
+                type: array
+                items: 
+                  $ref: '#/components/schemas/User'
+        "500":  
+          description: error interno del server, usualmente por query defectuosa. 
+    post:
+      summary: Crea un nuevo Usuario
+      tags: 
+        - Users
+      requestBody: 
+        required: true
+        content:
+          application/json:
+            schema: 
+              $ref: "#/components/requestBodies/updateUser"
+      responses: 
+        "201": 
+          description: El usuario fue creado correctamente  
+
+  /api/users/{uid}:
+    get:
+      summary: Obtiene un usuario a partir de un uid
+      tags: 
+        - Users
+      parameters: 
+        - name: uid
+          in: path
+          required: true
+          description: El id del usuario que desea solicitar
+          schema: 
+            type: string
+      responses: 
+        "200":
+          description: El usuario fue obtenido correctamente
+          content: 
+            application/json:
+              schema: 
+                $ref: "#/components/schemas/User"
+
+
+components:
+  schemas: 
+    User: 
+      type: object
+      properties: 
+        _id: 
+          type: string
+          description: Id autogenerados de Mogno.
+        first_name: 
+          type: string
+          description: Primer nombre del usuario.
+        last_name: 
+          type: string
+          description: Apellido del usuario.
+        email: 
+          type: string
+          description: Email del usuario.
+        password: 
+          type: string
+          description: Password del usuario.
+      example: 
+        _id: ObjectId("fajsñldf-.sadfjasa.asdfjasldfa")
+        first_name: Federico
+        last_name: Osandón
+        email: f@gmail.com  
+        password: asf$fas.asdf$&asfdas.&*fasdñlfasd  
+  requestBodies: 
+    updateUser: 
+      type: object
+      properties:  
+        first_name: 
+          type: string
+          description: Nombre del usuario.
+        last_name: 
+          type: string
+          description: Apellido del usuario.
+        email: 
+          type: string
+          description: Email del usuario.
+        password: 
+          type: string
+          description: Password del usuario.
+      example: 
+        first_name: Federico
+        last_name: Osandón
+        email: fedeyaml@gmail.com  
+        password: "123456"
+
+
+

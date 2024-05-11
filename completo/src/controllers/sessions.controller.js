@@ -83,6 +83,19 @@ class AuthController {
         }).send({status:'success', token, cid: user.cartId._id})
     }
 
+    // scriopt>
+    //     localStorage.setItem('token', token)
+
+
+    //     fetch('/api/auth/login', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //             'token': 'Bearer ' + localStorage.getItem('token')
+    //         }
+    //     })
+    // </scripo>
+
     logoutUser = async (req, res)=>{
         try {
             // session.destroy()
